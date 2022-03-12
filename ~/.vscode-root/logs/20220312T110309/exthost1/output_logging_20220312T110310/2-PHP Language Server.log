@@ -1,0 +1,51 @@
+DEBUG     Checking PHPLS_ALLOW_XDEBUG
+DEBUG     The Xdebug extension is not loaded
+
+[Info  - 11:03:11 a. m.] OK!
+[Info  - 11:03:11 a. m.] 295 files total
+[Info  - 11:03:11 a. m.] Indexing project for definitions and static references
+Parsing file:///opt/lampp/htdocs/makint/vendor/autoload.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/autoload_real.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/InstalledVersions.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/autoload_files.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/autoload_psr4.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/autoload_classmap.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/autoload_namespaces.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/platform_check.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/autoload_static.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/installed.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/ClassLoader.php
+Parsing file:///opt/lampp/htdocs/makint/index.php
+[Info  - 11:03:11 a. m.] Indexing project for dynamic references
+Parsing file:///opt/lampp/htdocs/makint/vendor/autoload.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/autoload_real.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/InstalledVersions.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/autoload_files.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/autoload_psr4.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/autoload_classmap.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/autoload_namespaces.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/platform_check.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/autoload_static.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/installed.php
+Parsing file:///opt/lampp/htdocs/makint/vendor/composer/ClassLoader.php
+Parsing file:///opt/lampp/htdocs/makint/index.php
+[Info  - 11:03:11 a. m.] 18 Packages
+[Info  - 11:03:11 a. m.] Restored psr/container:1.1.2 from cache
+[Info  - 11:03:11 a. m.] Restored psr/log:1.1.4 from cache
+[Info  - 11:03:11 a. m.] Restored symfony/dom-crawler:5.4.6 from cache
+[Info  - 11:03:11 a. m.] Restored symfony/polyfill-mbstring:1.25.0 from cache
+[Info  - 11:03:11 a. m.] Restored symfony/polyfill-php80:1.25.0 from cache
+[Info  - 11:03:11 a. m.] Restored symfony/css-selector:5.4.3 from cache
+[Info  - 11:03:11 a. m.] Restored symfony/polyfill-ctype:1.25.0 from cache
+[Info  - 11:03:11 a. m.] Restored symfony/polyfill-php72:1.25.0 from cache
+[Info  - 11:03:11 a. m.] Restored symfony/deprecation-contracts:2.5.0 from cache
+[Info  - 11:03:11 a. m.] Restored symfony/mime:5.4.3 from cache
+[Info  - 11:03:11 a. m.] Restored symfony/service-contracts:2.5.0 from cache
+[Info  - 11:03:11 a. m.] Restored symfony/polyfill-php73:1.25.0 from cache
+[Info  - 11:03:11 a. m.] Restored symfony/browser-kit:5.4.3 from cache
+[Info  - 11:03:11 a. m.] Restored symfony/polyfill-intl-normalizer:1.25.0 from cache
+[Info  - 11:03:11 a. m.] Restored symfony/polyfill-intl-idn:1.25.0 from cache
+[Info  - 11:03:11 a. m.] Restored symfony/http-client-contracts:2.5.0 from cache
+[Info  - 11:03:11 a. m.] Restored symfony/http-client:5.4.5 from cache
+[Info  - 11:03:11 a. m.] Restored fabpot/goutte:4.0.2 from cache
+[Info  - 11:03:11 a. m.] All 295 PHP files parsed in 0 seconds. 204 MiB allocated.

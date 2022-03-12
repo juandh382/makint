@@ -38,8 +38,7 @@
                             "items": [
                                 {
                                     "id": "workbench.action.reopenClosedEditor",
-                                    "label": "&&Reopen Closed Editor",
-                                    "enabled": false
+                                    "label": "&&Reopen Closed Editor"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -617,8 +616,7 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back",
-                        "enabled": false
+                        "label": "&&Back"
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -1533,9 +1531,9 @@
             "folder": "file:///opt/lampp/htdocs/makint",
             "backupPath": "/opt/lampp/htdocs/makint/~/.vscode-root/Backups/c9963769f8d081306e02fc4d3fdd832f",
             "uiState": {
-                "mode": 1,
+                "mode": 0,
                 "x": 448,
-                "y": 230,
+                "y": 267,
                 "width": 1024,
                 "height": 768
             }
