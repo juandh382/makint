@@ -1,0 +1,27 @@
+[2022-03-12 10:55:10.300] [exthost] [info] Extension host with pid 12553 started
+[2022-03-12 10:55:10.365] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-03-12 10:55:10.370] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.github
+[2022-03-12 10:55:10.374] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-03-12 10:55:10.391] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-03-12 10:55:10.436] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-03-12 10:55:10.468] [exthost] [info] Eager extensions activated
+[2022-03-12 10:55:10.476] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-03-12 10:55:10.487] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-03-12 10:55:10.490] [exthost] [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+[2022-03-12 10:56:26.424] [exthost] [info] extension host terminating: renderer closed the socket
+[2022-03-12 10:56:26.435] [exthost] [info] Extension host with pid 12553 exiting with code 0
+[2022-03-12 10:56:27.870] [exthost] [info] Extension host with pid 12719 started
+[2022-03-12 10:56:27.870] [exthost] [info] Skipping acquiring lock for /opt/lampp/htdocs/makint/~/.vscode-root/User/workspaceStorage/36ccad3f18a62e19407d5d1e5269cdec.
+[2022-03-12 10:56:27.980] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-03-12 10:56:27.983] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.github
+[2022-03-12 10:56:27.984] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-03-12 10:56:28.087] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-03-12 10:56:28.471] [exthost] [info] ExtensionService#_doActivateExtension zobo.php-intellisense, startup: true, activationEvent: 'workspaceContains:**/*.php'
+[2022-03-12 10:56:29.061] [exthost] [info] Eager extensions activated
+[2022-03-12 10:56:29.066] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-03-12 10:56:29.069] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-03-12 10:56:29.070] [exthost] [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+[2022-03-12 10:56:30.384] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+[2022-03-12 10:57:04.388] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 396
+[2022-03-12 10:57:07.914] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 396
+[2022-03-12 10:57:12.974] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 396
