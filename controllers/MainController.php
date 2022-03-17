@@ -1,12 +1,23 @@
 <?php
 
 class MainController {
+
+    
+
     public function init() {
+
+
+        require_once 'Scrappers/FPEScrapper.php';
        
-        $client = new Goutte\Client();
-        $crawler = $client->request('GET', 'https://www.fpe-store.com/Default.asp');
-        $crawler->filter('.v-product')->each(function ($node) {
-            print $node->text() . '</br>';
-        });
+        try {
+            
+            $fpeScrapper = new FPEScrapper();
+            $fpeScrapper->getAllProducts();
+
+        } catch (Exception $e) {
+            echo $e;
+        }
     }
+
+    
 }
