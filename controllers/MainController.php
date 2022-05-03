@@ -1,23 +1,29 @@
 <?php
 
-class MainController {
+class MainController
+{
 
-    
 
-    public function init() {
+
+    public function init()
+    {
 
 
         require_once 'Scrappers/FPEScrapper.php';
-       
-        try {
-            
-            $fpeScrapper = new FPEScrapper();
-            $fpeScrapper->getAllProducts();
 
-        } catch (Exception $e) {
+        try {
+
+            // $fpeScrapper = new FPEScrapper();
+            // $fpeProducts = $fpeScrapper->getAllProducts();
+            
+            require_once 'views/products/index.php';
+
+        }
+        catch (Exception $e) {
             echo $e;
         }
     }
 
-    
+
+
 }
