@@ -23,6 +23,8 @@ require_once 'views/layout/sidebar.php';
 /* CONTROLADORES */
 require 'controllers/ErrorController.php';
 require 'controllers/MainController.php';
+require 'helpers/utils.php';
+require 'controllers/UserController.php';
 
 function show_error()
 {

@@ -13,8 +13,8 @@ class MainController
 
         try {
 
-            // $fpeScrapper = new FPEScrapper();
-            // $fpeProducts = $fpeScrapper->getAllProducts();
+            $fpeScrapper = new FPEScrapper();
+            $fpeProducts = $fpeScrapper->getAllProducts();
             
             require_once 'views/products/index.php';
 
