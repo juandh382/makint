@@ -10,22 +10,19 @@ use Symfony\Component\DomCrawler\Crawler;
 class FPEScrapper
 {
     public $products = []; // Matriz en donde se almacenaran los datos de los productos
-
-    public $paginatorData = [
-        'url' => '',
-        'current' => 0,
-        'total' => 0,
-        'counter' => 1,
-        'max' => 10
-    ];
+    
+    public $issetGet = false;
 
     public function __construct() {
-
+        if (isset($_GET['page']) && isset($_GET['currentSection'])) {
+            $_SESSION['paginatorData']['counter'] = 0;
+            $this->issetGet = true;
+        }
     }
 
     public function getAllProducts()
     {
-
+        
         $client = new Goutte\Client();
 
         $crawler = $client->request(
@@ -33,57 +30,53 @@ class FPEScrapper
             'https://www.fpe-store.com/default.asp'
         );
 
-
-
         foreach ($crawler->filter('#display_menu_2 > ul > li > a') as $context) {
             $node = new Crawler($context);
 
-            $base_url = '';
-            $page = 0;
+            if ($this->issetGet) {
+
+                if ($node->text() == $_SESSION['paginatorData']['currentSection']) {
+
+                    if ($_SESSION['paginatorData']['current'] !== $_SESSION['paginatorData']['total']) {
 
 
-            if ($this->paginatorData['url'] !== '') {
-                if ($node->attr('href') !== $this->paginatorData['url']) {
-                    continue;
-                } else {
-                    if ($this->paginatorData['current'] == $this->paginatorData['total']) {
-                        $this->paginatorData['url'] = '';
-                        $this->paginatorData['current'] = 0;
-                        $this->paginatorData['total'] = 0;
+                        $this->searchProducts($_SESSION['paginatorData']['current'], $_SESSION['paginatorData']['url']);
+
+                    } else {
+
+                        $this->issetGet = false;
 
                         continue;
-                    } else {
-                        $base_url = $this->paginatorData['url'];
-                    }        
-                }
-            } else {
-                $base_url = $node->attr('href');
-            }
-
-
-            if ($this->paginatorData['counter'] > 1) {
-                
-                if ($this->paginatorData['current'] == $this->paginatorData['total']) {
-                    
-                    $this->paginatorData['current'] = 0;
-                    $this->paginatorData['total'] = 0;
-
-                    $page = 1;
+                    }
 
                 } else {
 
-                    $page = $this->paginatorData['current'];
+                    continue;
                 }
+
             } else {
-                $page = 1;
+                $this->searchProducts(1, $node->attr('href'));
             }
 
 
-            $this->searchProducts($page, $base_url);
+            if (count($_SESSION['paginatorData']['sections']) == 0) {
 
+                $crawler->filter('#display_menu_2 > ul > li > a')->each(function ($n) {
+                    $_SESSION['paginatorData']['sections'][] = [
+                        'name' => $n->attr('href'),
+                        'url' => $n->text()
+                    ];
+                });
+            }
+            
 
-        };
+            if ($_SESSION['paginatorData']['counter'] >= $_SESSION['paginatorData']['max']) {
 
+                $_SESSION['paginatorData']['currentSection'] = $node->text();
+                break;
+            }
+
+        }
 
         return $this->products;
     }
@@ -96,11 +89,6 @@ class FPEScrapper
     public function searchProducts($page = 1, $base_url)
     {
 
-
-        $this->paginatorData['current'] = $page;
-
-        $this->paginatorData['url'] = $base_url;
-
         $client = new Goutte\Client();
 
         $searchParams = '?searching=Y&sort=2&cat=114&show=300&page=';
@@ -112,14 +100,26 @@ class FPEScrapper
 
         $numberOfPages = (int)explode(' ', $crawler->filter('.search_results_section table td[align="right"]')->first()->filter('b')->text())[2];
 
-        $this->paginatorData['total'] = $numberOfPages;
+        $_SESSION['paginatorData']['current'] = $page;
+        $_SESSION['paginatorData']['url'] = $base_url;
+        $_SESSION['paginatorData']['total'] = $numberOfPages;
 
-        $this->getRelevantData($crawler);
 
-        if ($this->paginatorData['total'] > $this->paginatorData['current'] && $this->paginatorData['counter'] < $this->paginatorData['max']) {
+        if ($_SESSION['paginatorData']['counter'] <= $_SESSION['paginatorData']['max']) {
 
-            $this->searchProducts(++$this->paginatorData['current'], $this->paginatorData['url']);
-            $this->paginatorData['counter']++;
+            $this->getRelevantData($crawler);
+        }
+        
+        if ($_SESSION['paginatorData']['current'] < $_SESSION['paginatorData']['total'] && $_SESSION['paginatorData']['counter'] < $_SESSION['paginatorData']['max']) {
+            
+            $this->searchProducts(++$_SESSION['paginatorData']['current'], $_SESSION['paginatorData']['url']);
+            
+            $_SESSION['paginatorData']['counter']++;
+
+            // echo '<pre>';
+            // var_dump($_SESSION['paginatorData']);
+            // echo '</pre>';
+            
         }
 
     }

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-/* El orden de estos scripts es importante para su funcionalidad, no se deben de requerir en ordenes distintos */
+/* El orden de estos scripts es importante para su funcionalidad. No se deben de importar en orden distinto */
 
 include 'vendor/autoload.php';
 
@@ -11,7 +11,7 @@ require_once 'config/db.php';
 
 /** IMPORTACION DE LAS PRINCIPALES CONSTANTES */
 
-require_once 'config/parameters.php';
+require_once 'config/globals.php';
 
 
 /* LAYOUT */
@@ -21,9 +21,9 @@ require_once 'views/layout/sidebar.php';
 
 
 /* CONTROLADORES */
+require 'helpers/utils.php';
 require 'controllers/ErrorController.php';
 require 'controllers/MainController.php';
-require 'helpers/utils.php';
 require 'controllers/UserController.php';
 
 function show_error()

@@ -21,7 +21,7 @@ class Utils {
     public static function getAll($table) {
         
         
-        $db = new DB();
+        $db = new Connection();
         $params = array(':table' => $table);
         $result = false;
 

@@ -16,7 +16,7 @@ class Product {
 
 	public function __construct() 
 	{
-		$this->db = new DB();
+		$this->db = new Connection();
 	}
 
     public function setId($id) {
